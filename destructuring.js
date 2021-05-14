@@ -94,9 +94,9 @@ const ingredients = function (obj) {
 */
 
 //Code Here
-function largeNumbers({first, second, third}) {
+function largeNumbers({ first, second, third }) {
   return Math.min(first, second, third);
-} 
+}
 
 // This is the same function, but destructured inside the function 
 // function largeNumbers(obj) {
@@ -115,23 +115,24 @@ function largeNumbers({first, second, third}) {
 
 //Code Here
 
-const numberGroups = ({a, b, c}) => {
-  console.log(a, b, c)
-  console.log(typeof a)
-  console.log(a.length)
-   if (a.length > b.length && a.length > c.length) {
-    console.log('returning a')
-     return a
-   } else if (b.length > c.length && b.length > a.length) {
-    console.log('returning b')
-    return b
-   } else if (c.length > a.length && c.length > b.length) {
-     console.log('returning c')
-     return c
-   }
-   console.log("returning nothing")
+// const numberGroups = ({ a, b, c }) => {
+//   if (a.length > b.length && a.length > c.length) {
+//     return a
+//   } else if (b.length > c.length && b.length > a.length) {
+//     return b
+//   } else if (c.length > a.length && c.length > b.length) {
+//     return c
+//   }
+// }
+
+const numberGroups = ({ a, b, c }) => {
+  let longest = a;
+  if (b.length > longest.length) {
+    longest = b;
+  }
+  if (c.length > longest.length) {
+    longest = c;
+  }
+  return longest;
 }
 
-// a: (3) [1, 2, 3]
-// b: [1]
-// c: (5) [1, 2, 3, 4, 5]
