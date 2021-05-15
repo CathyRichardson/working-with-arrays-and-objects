@@ -51,6 +51,17 @@ var employees = [
 */
 
 //Code Here
+function employeeUpdater() {
+    employees.filter((val, i, arr) => {
+      !arr[i]["firstName"] === "Theo"
+    })
+    console.log(employees)
+    employees.map((val, i, arr) => {
+      
+    }
+   )
+    return employees
+  }
 
 
 
