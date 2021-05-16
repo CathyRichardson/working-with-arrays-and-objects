@@ -52,9 +52,9 @@ var employees = [
 
 //Code Here
 function employeeUpdater() {
-   employees.forEach((employee, i, arr) => {
+  employees.forEach((employee, i, arr) => {
     if (employee.firstName === "Theo") {
-      employees.splice(i, 1);
+      arr.splice(i, 1);
     } else if (employee.firstName === "Lorie") {
       employee.department = "HR";
     }
@@ -83,6 +83,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 
+function removeDuplicates(arr) {
+  let noDupes = [];
+  arr.forEach((e) => {
+    if (!noDupes.includes(e)) {
+      noDupes.push(e);
+    }
+  }
+  );
+  return noDupes;
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -113,7 +123,8 @@ var cat = {
 var grumpyActivity;
 var fluffy2ndFriend;
 
-
+grumpyActivity = cat.catFriends[0]["activities"][1]
+fluffy2ndFriend = cat.catFriends[1]["name"]
 
 ////////// PROBLEM 4 //////////
 
@@ -153,12 +164,21 @@ var myCar = {
 
 //Code Here
 
+function recordCleaner() {
+  myCar.accidents.forEach(e => {
+    e.atFaultForAccident = false;
+  });
+}
 
 
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+var numsArr = [
+  [1, 2, 3, 4],
+  [5, 6],
+  [7, 8, 9, 10, 11]
+];
 // Do not edit the code above.
 
 /*
@@ -171,5 +191,21 @@ var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
+
+function looper() {
+  numsArr.forEach(e =>{
+    e.forEach((el,i,arr) => {
+      if (el % 2 === 0) {
+        arr[i] = "even";
+      } else {
+        arr[i] = "odd";
+      }
+    });
+  });
+  return numsArr;
+}
+
+
+
 
 
